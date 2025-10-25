@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screener – Effortless Screen Recording for macOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page page--hero">
+  <div class="orb orb--one" aria-hidden="true"></div>
+  <div class="orb orb--two" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <span class="badge">Screener</span>
+      <nav class="site-header__nav">
+        <a href="#features">Features</a>
+        <a href="#highlights">Highlights</a>
+        <a href="instructions.html">Setup Guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section class="hero__content">
+      <div class="hero__badge">New release</div>
+      <h1 class="hero__title">Pro screen recording with internal audio, built for creators.</h1>
+      <p class="hero__copy">
+        Capture crystal-clear screen recordings, keep your Mac running fast with ultra-low memory usage,
+        and export in studio-quality formats. Screener helps you focus on the story—not the setup.
+      </p>
+      <div class="hero__actions">
+        <button class="pill-button pill-button--primary" id="downloadButton">
+          <span class="pill-button__label">Download for macOS</span>
+          <span class="pill-button__meta">Universal • 94&nbsp;MB DMG</span>
+        </button>
+        <a class="pill-button pill-button--ghost" href="#features">Explore features</a>
+      </div>
+      <p class="hero__fineprint">Requires macOS 12 Monterey or later</p>
+    </section>
+    <section class="hero__visual">
+      <div class="device-card">
+        <div class="device-card__screen">
+          <div class="recording-widget">
+            <span class="recording-widget__dot" aria-hidden="true"></span>
+            Recording 4K • 60fps
+          </div>
+          <div class="device-card__waveform" aria-hidden="true"></div>
+        </div>
+        <div class="device-card__meta">
+          <h2>Studio-grade capture</h2>
+          <p>Internal audio, mic mixing, and session bookmarks—wrapped in a minimal interface.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="feature-grid" id="features">
+    <article class="feature-card">
+      <h3>Internal audio capture</h3>
+      <p>Route system audio directly into your recordings without extra cables or drivers.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Whisper-quiet footprint</h3>
+      <p>Optimized for low memory usage so your Mac stays cool while you capture your screen.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Creator-friendly controls</h3>
+      <p>Set custom hotkeys, mark highlights as you record, and export without touching a timeline.</p>
+    </article>
+  </section>
+
+  <section class="highlight-panel" id="highlights">
+    <div class="highlight-panel__content">
+      <h2>Made for makers</h2>
+      <p>
+        Screener is the fastest way to capture product demos, course lessons, and game highlights
+        with synchronized audio. Built by creators for creators, every detail helps you hit record faster.
+      </p>
+    </div>
+    <ul class="highlight-panel__list">
+      <li>Instant project switching with workspace presets</li>
+      <li>AI-powered noise filtering keeps vocals crisp</li>
+      <li>Share-ready exports in HEVC and ProRes</li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Screener Labs. Built for storytellers.</p>
+    <a class="link-pill" href="instructions.html">Need installation help?</a>
+  </footer>
+
+  <script>
+    const downloadButton = document.getElementById('downloadButton');
+    const downloadUrl = encodeURI('Screener Distribution.dmg');
+
+    downloadButton?.addEventListener('click', () => {
+      const anchor = document.createElement('a');
+      anchor.href = downloadUrl;
+      anchor.download = 'Screener Distribution.dmg';
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+
+      setTimeout(() => {
+        window.location.href = 'instructions.html';
+      }, 300);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
