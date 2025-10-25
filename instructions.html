@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screener – macOS Installation Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page page--instructions">
+  <div class="orb orb--three" aria-hidden="true"></div>
+  <header class="site-header site-header--minimal">
+    <div class="site-header__inner">
+      <a class="badge" href="index.html">Screener</a>
+      <span class="site-header__subtitle">Installation Guide</span>
+    </div>
+  </header>
+
+  <main class="instructions">
+    <section class="instructions__intro">
+      <h1>You're moments away from recording smarter.</h1>
+      <p>Follow these steps to allow Screener to run on your Mac after the download completes.</p>
+    </section>
+
+    <ol class="instruction-steps">
+      <li>
+        <h2>Locate the download</h2>
+        <p>Open <strong>Finder → Downloads</strong> and double-click <em>Screener Distribution.dmg</em> to mount it.</p>
+      </li>
+      <li>
+        <h2>Drag Screener to Applications</h2>
+        <p>In the window that appears, drag the <strong>Screener</strong> icon into your <strong>Applications</strong> folder.</p>
+      </li>
+      <li>
+        <h2>Bypass Apple Gatekeeper</h2>
+        <p>
+          On first launch, macOS will block the app because it’s from an unidentified developer. To approve it:
+        </p>
+        <ul>
+          <li>Open <strong>System Settings</strong> (or <strong>System Preferences</strong> on older macOS versions).</li>
+          <li>Navigate to <strong>Privacy &amp; Security</strong>.</li>
+          <li>Scroll to the <strong>Security</strong> section and look for “Screener was blocked from use.”</li>
+          <li>Click <strong>Open Anyway</strong>. Enter your administrator password or use Touch ID if prompted.</li>
+        </ul>
+        <p>
+          When you relaunch Screener, macOS will ask for confirmation one more time. Choose <strong>Open</strong> to trust the developer.
+        </p>
+      </li>
+      <li>
+        <h2>Grant capture permissions</h2>
+        <p>
+          Screener will guide you through enabling screen recording and microphone access. Approve these prompts so
+          internal audio capture and voiceovers work flawlessly.
+        </p>
+      </li>
+    </ol>
+
+    <section class="instructions__cta">
+      <div class="cta-card">
+        <h2>Ready to capture?</h2>
+        <p>Open Screener from your Applications folder and press <kbd>⌘</kbd><kbd>⇧</kbd><kbd>5</kbd> to start your first recording.</p>
+        <div class="cta-card__actions">
+          <a class="pill-button pill-button--primary" href="Screener%20Distribution.dmg" download>Re-download DMG</a>
+          <a class="pill-button pill-button--ghost" href="index.html">Back to product page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Need a hand? Email <a href="mailto:support@screener.app">support@screener.app</a></p>
+  </footer>
+</body>
+</html>
